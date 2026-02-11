@@ -75,7 +75,7 @@ jobs:
         sudo mv BootCardMaker/u-boot.bin openwrt/
         sudo mv files/mod-boot-sdcard.tar.gz openwrt/
         cd openwrt
-        if [ ${{ env.file_type }} = "img.gz" ]; then
+        if [ ${{ env.file_type }}" = "img.gz" ]; then
           sudo gunzip ${{ env.file_name }}.gz
         else
           sudo unxz ${{ env.file_name }}.xz
